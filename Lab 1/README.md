@@ -80,13 +80,13 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 
 \*\***Include pictures of your storyboards here**\*\*
 
-![Storyboard 1](IMG_6536.jpeg)
-![Storyboard 2](IMG_6537.jpeg)
-![Storyboard 3](IMG_6538.jpeg)
-![Storyboard 4](IMG_6539.jpeg)
-![Storyboard 5](IMG_6540.jpeg)
-![Storyboard 6](IMG_6541.jpeg)
-![Storyboard 7](IMG_6542.jpeg)
+![Storyboard 1](storyboard_1.jpeg)
+![Storyboard 2](storyboard_2.jpeg)
+![Storyboard 3](storyboard_3.jpeg)
+![Storyboard 4](storyboard_4.jpeg)
+![Storyboard 5](storyboard_5.jpeg)
+![Storyboard 6](storyboard_6.jpeg)
+![Storyboard 7](storyboard_7.jpeg)
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
@@ -141,9 +141,9 @@ Think about the setting of the device: is the environment a place where the devi
 
 \*\***Include sketches of what your devices might look like here.**\*\*
 
-![Costume 1](IMG_0900.JPEG)
-![Costume 2](IMG_0906.JPEG)
-![Costume 3](IMG_6580.JPEG)
+![Costume 1](costume_1.JPEG)
+![Costume 2](costume_2.JPEG)
+![Costume 3](costume_3.JPEG)
 
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
 
