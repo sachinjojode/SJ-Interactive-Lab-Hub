@@ -143,7 +143,7 @@ Think about the setting of the device: is the environment a place where the devi
 
 ![Costume 1](costume_1.JPEG)
 ![Costume 2](costume_2.JPEG)
-![Costume 3](costume_3.JPEG)
+![Costume 3](costume_3.jpeg)
 
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
 
