@@ -80,13 +80,13 @@ Storyboards are a tool for visually exploring a users interaction with a device.
 
 \*\***Include pictures of your storyboards here**\*\*
 
-![Storyboard 1](storyboard_1.jpeg)
-![Storyboard 2](storyboard_2.jpeg)
-![Storyboard 3](storyboard_3.jpeg)
-![Storyboard 4](storyboard_4.jpeg)
-![Storyboard 5](storyboard_5.jpeg)
-![Storyboard 6](storyboard_6.jpeg)
-![Storyboard 7](storyboard_7.jpeg)
+![Storyboard 1](1a/storyboard_1.jpeg)
+![Storyboard 2](1a/storyboard_2.jpeg)
+![Storyboard 3](1a/storyboard_3.jpeg)
+![Storyboard 4](1a/storyboard_4.jpeg)
+![Storyboard 5](1a/storyboard_5.jpeg)
+![Storyboard 6](1a/storyboard_6.jpeg)
+![Storyboard 7](1a/storyboard_7.jpeg)
 
 Present your ideas to the other people in your breakout room (or in small groups). You can just get feedback from one another or you can work together on the other parts of the lab.
 
@@ -105,6 +105,109 @@ Yes. A few things that seemed better on paper rather than acted out is all of th
 \*\***Are there new ideas that occur to you or your collaborator that come up from the acting?**\*\*
 
 Some ideas that occured to myself and my collaborator was to integrate the device with apps like Instacart, DoorDash, UberEats, etc., so that the device can automatically add to a grocery list when there are missing ingredients. In addition, rather than having a single light indicating if the ingredient that was picked is correct, we could integrate a progress bar, which would allow users to know if they are close to finishing the gathering of ingredients. In addition, this device could integrate with a phone and send reminders if ingredients are running low or expiring. While this last idea strays from the simplicity of our current device, it is still a future posssibility.
+
+## Part C. Prototype the device
+
+You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
+
+Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/IRL-CT/tinkerbelle).
+
+We invented this tool for this lab! 
+
+If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
+
+\*\***Give us feedback on Tinkerbelle.**\*\*
+
+Tinkerbelle looks great and it is designed super well. It is intuitive and easy to set up. The only feedback that I have is that for our scenario of prototyping the device, since my partner and I were in different locations, as I commute from Long Island and he lives on campus, we were not able to meet and work on the prototype videos together. Therefore, since you need to be on the same Wi-Fi to use Tinkerbelle, we had to explore other opportunities. Overall, super well built.
+
+## Part D. Wizard the device
+Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
+
+\*\***Include your first attempts at recording the set-up video here.**\*\*
+
+I am not able to embed the video into this markdown file, but I put the video in the "1a/Interactions" folder with the name of "first_attempt.mov".
+
+Now, change the goal within the same setting, and update the interaction with the paper prototype. 
+
+\*\***Show the follow-up work here.**\*\*
+
+I am not able to embed the video into this markdown file, but I put the video in the "1a/Interactions" folder with the name of "prototype_1.mov".
+
+## Part E. Costume the device
+
+Only now should you start worrying about what the device should look like. Develop three costumes so that you can use your phone as this device.
+
+Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
+
+\*\***Include sketches of what your devices might look like here.**\*\*
+
+![Costume 1](1a/costume_1.JPEG)
+![Costume 2](1a/costume_2.JPEG)
+![Costume 3](1a/costume_3.jpeg)
+![Costume 4](1a/costume_4.jpeg)
+
+\*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
+
+Some concerns that are influencing the way we designed the device is fridge space and the temperature in the fridge. We tried to make the designs take up the least amount of space and even camoflage with it's environment so that it would be easy for users to integrate it into their fridge.
+
+## Part F. Record
+
+\*\***Take a video of your prototyped interaction.**\*\*
+
+I am not able to embed the video into this markdown file, but I put the prototyped interaction videos in the "1a/Interactions" folder with the names of "prototype_1.mov", "prototype_2.mov", and "prototype_3.mov".
+
+\*\***Please indicate who you collaborated with on this Lab.**\*\*
+Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+
+I worked with Nikhil Gangaram. He helped out tremendously and the idea for this device was his. We worked together closely to make the storyboards, get feedback, and create the videos. He put in a lot of time to make the costumes and was a great partner. We took some inspiration from Duolingo and how they teach with reinforcement learning.
+
+# Staging Interaction, Part 2 
+
+This describes the second week's work for this lab activity.
+
+
+## Prep (to be done before Lab on Wednesday)
+
+You will be assigned three partners from other groups. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
+
+\*\***Summarize feedback from your partners here.**\*\*
+
+## Make it your own
+
+Do last week’s assignment again, but this time: 
+1) It doesn’t have to (just) use light, 
+2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative! Feel free to fork and modify the tinkerbell code! 
+3) We will be grading with an emphasis on creativity. 
+
+\*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+
+\*\***Describe your setting, players, activity and goals here.**\*\*
+
+#####The setting of our interactive device is a house or apartment that has a fridge that is used by the residents to cook meals. It is not meant to be used in situations such as commercial kitchens with fridges. The players involved in the interaction are the residents of the apartment or house, there will be other people such as guests, but since the device is located inside of the fridge, it is typically only used by 1 person at a time. The activity is that the resident is interested in cooking a meal and wants to know if they have the correct ingredients, whether the ingredients are still within their expiration date, and if there is any substitutes that can be made with specific items in the fridge. The goal of each player is to make whichever meal they would like in an easy way and keep track of their ingredients.
+
+\*\***Include pictures of your storyboards here**\*\*
+
+![Storyboard 1](1b/storyboard_1.jpeg)
+![Storyboard 2](1b/storyboard_2.jpeg)
+![Storyboard 3](1b/storyboard_3.jpeg)
+![Storyboard 4](1b/storyboard_4.jpeg)
+![Storyboard 5](1b/storyboard_5.jpeg)
+![Storyboard 6](1b/storyboard_6.jpeg)
+![Storyboard 7](1b/storyboard_7.jpeg)
+
+\*\***Summarize feedback you got here.**\*\*
+
+#####We got great feedback from others regarding the idea. They thought that it was an interesting concept that could help reduce food waste and help people learn how to cook. Some specific feedback that we received were to add sound/voice so that the device became even more interactive. In addition, another piece of feedback that we were given is to figure out a way to indicate the quantities of items. In our current use case, there is no way to tell the user how much of each item that they need for their recipe, and this is something we will try to add in the future. Finally, we received feedback that the device might not be nuanced enough. For example, someone could make pasta with eggs and flour, or with just uncooked pasta, but the interactive device might not be able to understand this. We would like the fix this in further versions of the device.
+
+## Part B. Act out the Interaction
+
+\*\***Are there things that seemed better on paper than acted out?**\*\*
+
+#####Yes. A few things that seemed better on paper rather than acted out is all of the different flashing colors which indicated specific things. When actually grabbing different ingredients, it was confusing to see what the colors meant for example, yellow for expiring soon, purple for close, but not the right ingredient, and flashing vs steady lights. It gets a little complicated and has a learning curve. Another problem was with asking which recipes can be made with the ingredients in the fridge. The first problem was trying to figure out how the device would even know what ingredients there were, second, what happens when there is a partial match, and third, it takes a long time to get the ingredients out once you know you can make a recipe, especially with a full fridge. In addition, I found it awkward and unnatural to talk to the fridge, but that could be more intuitive for some people more than others.
+
+\*\***Are there new ideas that occur to you or your collaborator that come up from the acting?**\*\*
+
+#####Some ideas that occured to myself and my collaborator was to integrate the device with apps like Instacart, DoorDash, UberEats, etc., so that the device can automatically add to a grocery list when there are missing ingredients. In addition, rather than having a single light indicating if the ingredient that was picked is correct, we could integrate a progress bar, which would allow users to know if they are close to finishing the gathering of ingredients. In addition, this device could integrate with a phone and send reminders if ingredients are running low or expiring. While this last idea strays from the simplicity of our current device, it is still a future posssibility.
 
 ## Part C. Prototype the device
 
@@ -160,23 +263,3 @@ I am not able to embed the video into this markdown file, but I put the prototyp
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
 I worked with Nikhil Gangaram. He helped out tremendously and the idea for this device was his. We worked together closely to make the storyboards, get feedback, and create the videos. He put in a lot of time to make the costumes and was a great partner. We took some inspiration from Duolingo and how they teach with reinforcement learning.
-
-# Staging Interaction, Part 2 
-
-This describes the second week's work for this lab activity.
-
-
-## Prep (to be done before Lab on Wednesday)
-
-You will be assigned three partners from other groups. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
-
-\*\***Summarize feedback from your partners here.**\*\*
-
-## Make it your own
-
-Do last week’s assignment again, but this time: 
-1) It doesn’t have to (just) use light, 
-2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative! Feel free to fork and modify the tinkerbell code! 
-3) We will be grading with an emphasis on creativity. 
-
-\*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
