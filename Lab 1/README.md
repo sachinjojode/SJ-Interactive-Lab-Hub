@@ -2,7 +2,7 @@
 
 # Staging Interaction
 
-Collaborator: **Nikhil Gangaram**
+Collaborator: **Nikhil Gangaram & Viha Srinivas**
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell). 
 
@@ -118,7 +118,7 @@ If you run into technical issues with this tool, you can also use a light switch
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
 
-Tinkerbelle looks great and it is designed super well. It is intuitive and easy to set up. The only feedback that I have is that for our scenario of prototyping the device, since my partner and I were in different locations, as I commute from Long Island and he lives on campus, we were not able to meet and work on the prototype videos together. Therefore, since you need to be on the same Wi-Fi to use Tinkerbelle, we had to explore other opportunities. Overall, super well built.
+Tinkerbelle looks great and it is designed super well. It is intuitive and easy to set up. The only feedback that I have is that for our scenario of prototyping the device, since my partners and I were in different locations, we were not able to meet and work on the prototype videos together. Therefore, since you need to be on the same Wi-Fi to use Tinkerbelle, we had to explore other opportunities. Overall, super well built.
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
@@ -159,7 +159,7 @@ I am not able to embed the video into this markdown file, but I put the prototyp
 \*\***Please indicate who you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
-I worked with Nikhil Gangaram. He helped out tremendously and the idea for this device was his. We worked together closely to make the storyboards, get feedback, and create the videos. He put in a lot of time to make the costumes and was a great partner. We took some inspiration from Duolingo and how they teach with reinforcement learning.
+I worked with Nikhil Gangaram and Viha Srinivas. They both helped out tremendously and the idea for this device was Nikhil's. We worked together closely to make the storyboards, get feedback, and create the videos. I mostly worked on the videos and costumes, Viha worked more on the storyboards, and Nikhil helped with both the videos and costumes. They both put in a lot of time to make the physical prototypes. We took some inspiration from Duolingo and how they teach with reinforcement learning.
 
 # Staging Interaction, Part 2 
 
@@ -183,7 +183,7 @@ Do last week’s assignment again, but this time:
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
 
-#####The setting of our interactive device is a house or apartment that has a fridge that is used by the residents to cook meals. It is not meant to be used in situations such as commercial kitchens with fridges. The players involved in the interaction are the residents of the apartment or house, there will be other people such as guests, but since the device is located inside of the fridge, it is typically only used by 1 person at a time. The activity is that the resident is interested in cooking a meal and wants to know if they have the correct ingredients, whether the ingredients are still within their expiration date, and if there is any substitutes that can be made with specific items in the fridge. The goal of each player is to make whichever meal they would like in an easy way and keep track of their ingredients.
+The setting of our interactive device is any place that has a fridge that is used to store ingredients to cook meals. It is not fully applicable for fridges that have other usecases, but can definitely be changed for those uses in the future. The players involved in the interaction are the people that reside or work at the place with a fridge used for cooking, there will be other people such as guests, but since the device is located inside of a fridge, it is typically only used by 1 person at a time. The activity is that the resident is interested in cooking a meal and wants to know if they have the correct ingredients, whether the ingredients are still within their expiration date, and if there is any substitutes that can be made with specific items in the fridge. The device is meant to help users learn how to cook through reinforcement learning. The goal of each player is to make whichever meal they would like in an easy way and keep track of their ingredients.
 
 \*\***Include pictures of your storyboards here**\*\*
 
@@ -197,17 +197,17 @@ Do last week’s assignment again, but this time:
 
 \*\***Summarize feedback you got here.**\*\*
 
-#####We got great feedback from others regarding the idea. They thought that it was an interesting concept that could help reduce food waste and help people learn how to cook. Some specific feedback that we received were to add sound/voice so that the device became even more interactive. In addition, another piece of feedback that we were given is to figure out a way to indicate the quantities of items. In our current use case, there is no way to tell the user how much of each item that they need for their recipe, and this is something we will try to add in the future. Finally, we received feedback that the device might not be nuanced enough. For example, someone could make pasta with eggs and flour, or with just uncooked pasta, but the interactive device might not be able to understand this. We would like the fix this in further versions of the device.
+xxxxx
 
 ## Part B. Act out the Interaction
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
 
-#####Yes. A few things that seemed better on paper rather than acted out is all of the different flashing colors which indicated specific things. When actually grabbing different ingredients, it was confusing to see what the colors meant for example, yellow for expiring soon, purple for close, but not the right ingredient, and flashing vs steady lights. It gets a little complicated and has a learning curve. Another problem was with asking which recipes can be made with the ingredients in the fridge. The first problem was trying to figure out how the device would even know what ingredients there were, second, what happens when there is a partial match, and third, it takes a long time to get the ingredients out once you know you can make a recipe, especially with a full fridge. In addition, I found it awkward and unnatural to talk to the fridge, but that could be more intuitive for some people more than others.
+xxxxx
 
 \*\***Are there new ideas that occur to you or your collaborator that come up from the acting?**\*\*
 
-#####Some ideas that occured to myself and my collaborator was to integrate the device with apps like Instacart, DoorDash, UberEats, etc., so that the device can automatically add to a grocery list when there are missing ingredients. In addition, rather than having a single light indicating if the ingredient that was picked is correct, we could integrate a progress bar, which would allow users to know if they are close to finishing the gathering of ingredients. In addition, this device could integrate with a phone and send reminders if ingredients are running low or expiring. While this last idea strays from the simplicity of our current device, it is still a future posssibility.
+xxxxx
 
 ## Part C. Prototype the device
 
@@ -221,20 +221,20 @@ If you run into technical issues with this tool, you can also use a light switch
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
 
-Tinkerbelle looks great and it is designed super well. It is intuitive and easy to set up. The only feedback that I have is that for our scenario of prototyping the device, since my partner and I were in different locations, as I commute from Long Island and he lives on campus, we were not able to meet and work on the prototype videos together. Therefore, since you need to be on the same Wi-Fi to use Tinkerbelle, we had to explore other opportunities. Overall, super well built.
+Tinkerbelle looks great and it is designed super well. It is intuitive and easy to set up. The only feedback that I have is that for our scenario of prototyping the device, since my partners and I were in different locations, as I commute from Long Island and they live on RI, we were not able to meet and work on the prototype videos together. Therefore, since you need to be on the same Wi-Fi to use Tinkerbelle, we had to explore other opportunities. Overall, super well built.
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-I am not able to embed the video into this markdown file, but I put the video in the "Interactions" folder with the name of "first_attempt.mov".
+xxxxx
 
 Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
 
-I am not able to embed the video into this markdown file, but I put the video in the "Interactions" folder with the name of "prototype_1.mov".
+xxxxx
 
 ## Part E. Costume the device
 
@@ -251,15 +251,15 @@ Think about the setting of the device: is the environment a place where the devi
 
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
 
-Some concerns that are influencing the way we designed the device is fridge space and the temperature in the fridge. We tried to make the designs take up the least amount of space and even camoflage with it's environment so that it would be easy for users to integrate it into their fridge.
+xxxxx
 
 ## Part F. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-I am not able to embed the video into this markdown file, but I put the prototyped interaction videos in the "Interactions" folder with the names of "prototype_1.mov", "prototype_2.mov", and "prototype_3.mov".
+xxxxx
 
 \*\***Please indicate who you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
-I worked with Nikhil Gangaram. He helped out tremendously and the idea for this device was his. We worked together closely to make the storyboards, get feedback, and create the videos. He put in a lot of time to make the costumes and was a great partner. We took some inspiration from Duolingo and how they teach with reinforcement learning.
+xxxxx
