@@ -125,13 +125,15 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-I am not able to embed the video into this markdown file, but I put the video in the "1a/Interactions" folder with the name of "first_attempt.mov".
+[First Attempt](1a/Interactions/first_attempts.MOV)
+If this doesn't work please play the video through the repository files.
 
 Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
 
-I am not able to embed the video into this markdown file, but I put the video in the "1a/Interactions" folder with the name of "prototype_1.mov".
+[Follow-Up](1a/Interactions/prototype_1.MOV)
+If this doesn't work please play the video through the repository files.
 
 ## Part E. Costume the device
 
@@ -154,7 +156,10 @@ Some concerns that are influencing the way we designed the device is fridge spac
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-I am not able to embed the video into this markdown file, but I put the prototyped interaction videos in the "1a/Interactions" folder with the names of "prototype_1.mov", "prototype_2.mov", and "prototype_3.mov".
+[Prototype 1](1a/Interactions/prototype_1.MOV)
+[Prototype 2](1a/Interactions/prototype_2.MOV)
+[Prototype 3](1a/Interactions/prototype_3.MOV)
+If these videos don't work please play the videos through the repository files.
 
 \*\***Please indicate who you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
@@ -171,6 +176,8 @@ This describes the second week's work for this lab activity.
 You will be assigned three partners from other groups. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
 \*\***Summarize feedback from your partners here.**\*\*
+
+I got a perfect score from both of my partners. They really liked the originality of the "Duolingo for Cooking" idea and said that my interactions felt natural. In addition, they said my README file was well documented and organized.
 
 ## Make it your own
 
@@ -197,17 +204,17 @@ The setting of our interactive device is any place that has a fridge that is use
 
 \*\***Summarize feedback you got here.**\*\*
 
-xxxxx
+Some feedback we received was to improve the color system, since it is a little confusing. In addition, with the allergy storyboard, we were told that it might be too aggressive to just say "No, you can't have this" and there also need to be safeguards because there might be multiple people in households that have different allergies. Some users were also confused on how the device knows what is in the fridge, and we realized we should think about adding cameras or computer vision, just as a showpiece, to help explain the prototype better.
 
 ## Part B. Act out the Interaction
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
 
-xxxxx
+Speaking to the device in a kitchen is a little tough, especially if other people are cooking. I realized that the kitchen could get loud, which would make the device struggle to understand what I am saying. In addition, when acting out the calorie tracker, we realized it was a little confusing if someone had a meal not at home. That meal would not be measured and could skew data points. Finally, the colors just didn't make sense, and if the device was talking to me, then I was starting to think the colors changing were only useful for individuals with hearing issues.
 
 \*\***Are there new ideas that occur to you or your collaborator that come up from the acting?**\*\*
 
-xxxxx
+Some new ideas were to add a push to talk option rather than an always on option. In addition, we thought it might be a good idea to have a home screen that automatically has a few recipes that can be made from items in the fridge, in the scenario that the user is in a rush. We also though adding profiles to the device is essential.
 
 ## Part C. Prototype the device
 
@@ -228,13 +235,15 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-xxxxx
+[Set-Up](1b/Interactions/setup.MOV)
+If this doesn't work please play the video through the repository files.
 
 Now, change the goal within the same setting, and update the interaction with the paper prototype. 
 
 \*\***Show the follow-up work here.**\*\*
 
-xxxxx
+[Follow-Up](1b/Interactions/prototype_1.MOV)
+If this doesn't work please play the video through the repository files.
 
 ## Part E. Costume the device
 
@@ -244,22 +253,27 @@ Think about the setting of the device: is the environment a place where the devi
 
 \*\***Include sketches of what your devices might look like here.**\*\*
 
-![Costume 1](costume_1.JPEG)
-![Costume 2](costume_2.JPEG)
-![Costume 3](costume_3.jpeg)
-![Costume 4](costume_4.jpeg)
+![Costume 1](1b/costume_1.jpeg)
+![Costume 2](1b/costume_2.jpeg)
+![Costume 3](1b/costume_3.jpeg)
+![Costume 4](1b/costume_4.jpeg)
+![Costume 5](1b/costume_5.jpeg)
+![Costume 6](1b/costume_6.jpeg)
 
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
 
-xxxxx
+Some of the main concerns were lack of space in the fridge, ease of use for the user, and the temperature in the fridge. Most of the costumes were designed to be out of the way for users of the fridge, but also in plain sight so that they could converse with the device. We also came out with costumes that could be added to the outside of the fridge.
 
 ## Part F. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-xxxxx
+[Prototype 1](1b/Interactions/prototype_1.MOV)
+[Prototype 2](1b/Interactions/prototype_2.MOV)
+[Prototype 3](1b/Interactions/prototype_3.MOV)
+If these videos don't work please play the videos through the repository files.
 
 \*\***Please indicate who you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
-xxxxx
+We got our idea of teaching how to cook from Duolingo's teaching model. Nikhil worked on helping organizing which storyboards to make and he made 2 storyboards while Viha made 3 and I made the rest. Viha helped design the costumes and played the voice in the prototype videos, while Nikhil changed the colors of the screen. They were great to work with, super communicative, and I would love to work with them again.
