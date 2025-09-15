@@ -191,6 +191,17 @@ Pro Tip: Using tools like [code-server](https://coder.com/docs/code-server/lates
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+![Sketch 1](sketches/sketch_1.jpeg)
+![Sketch 2](sketches/sketch_2.jpeg)
+![Sketch 3](sketches/sketch_3.jpeg)
+![Sketch 4](sketches/sketch_4.jpeg)
+![Sketch 5](sketches/sketch_5.jpeg)
+![Sketch 6](sketches/sketch_6.jpeg)
+![Sketch 7](sketches/sketch_7.jpeg)
+![Sketch 8](sketches/sketch_8.jpeg)
+![Sketch 9](sketches/sketch_9.jpeg)
+![Sketch 10](sketches/sketch_10.jpeg)
+
 
 # Prep for Part 2
 
