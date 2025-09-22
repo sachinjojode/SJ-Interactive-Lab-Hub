@@ -1,5 +1,4 @@
 # Interactive Prototyping: The Clock of Pi
-**Nikhil Gangaram & Viha Srinivas**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -8,7 +7,10 @@ For our first Pi project, we will pay homage to the [timekeeping devices of old]
 It is worth spending a little time thinking about how you mark time, and what would be useful in a clock of your own design.
 
 **Please indicate anyone you collaborated with on this Lab here.**
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design.
+
+**Nikhil Gangaram (ng544) & Viha Srinivas (vs544)**
+Nikhil and I worked heavily on the coding aspect of the lab and we both made our own seasons clock. He also worked on some of the storyboards that helped influence the seasons clock. Viha also worked on the storyboards and helped us ideate until we came up with the seasons clock, she was also able to critique our idea so that it became better, since when we made the first draft of the seasons clock it wasn't too innovative.
 
 ## Prep
 
@@ -221,16 +223,25 @@ Can you make time interactive? You can look in `screen_test.py` for examples for
 
 Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
 
+Sketches:
+![Verplank](sketches/IMG_9428.png)
+![Workflow](sketches/IMG_9276.png)
+
+
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
 
 \*\*\***A copy of your code should be in your Lab 2 Github repo.**\*\*\*
+
+File name is seasons_clock_1.py
 
 
 ## Assignment that was formerly Part F. 
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your PiClock.**\*\*\*
+
+**You can locate the video in the repository under Lab 2/sketches/seasons_clock_demo.mov**
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
@@ -249,6 +260,11 @@ Modify the code from last week's lab to make a new visual interface for your new
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
 
+Contributions are listed at the top of the write-up.
+
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
 
+**Feedback**
+
+In terms of feedback, we spoke with some people during class this past Monday and were able to learn more about how they built their pi clock. One of the people we spoke with made it so the clock was based off how much water was in a cup, we were able to get a better sense of the direction we should have gone in. In addition, we were given feedback that some of our ideas were more about the environment of the clock rather than the actual clock display, so we made sure the clock display was the main priority.
