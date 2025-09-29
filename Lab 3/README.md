@@ -1,5 +1,6 @@
 # Chatterboxes
-**NAMES OF COLLABORATORS HERE**
+**Nikhil Gangaram (ng544) & Viha Srinivas (vs544)**
+
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
 
 In this lab, we want you to design interaction with a speech-enabled device--something that listens and talks to you. This device can do anything *but* control lights (since we already did that in Lab 1).  First, we want you first to storyboard what you imagine the conversational interaction to be like. Then, you will use wizarding techniques to elicit examples of what people might say, ask, or respond.  We then want you to use the examples collected from at least two other people to inform the redesign of the device.
@@ -236,9 +237,24 @@ From a remote browser on the same network, check to make sure your webserver is 
 
 Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.) 
 
-\*\***Post your storyboard and diagram here.**\*\*
+\*\***Post your storyboard and diagram here.**\*\* 
+
+![Storyboard 1](dialogue_prototype.jpeg)
+![Storyboard 2](prototype_two.jpeg)
+
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
+
+AI Therapist: Hi, I am your AI Therapist! Feel free to talk to me about any struggles you might be having, situations that you are trying to navigate, and anything else you would like guidance on. All conversations are confidential, so this is a safe place to voice your concerns!
+
+Participant: …
+
+AI Therapist: I understand your concern, it seems that you are currently feeling x, x, and x. Would you like me to be more practical and rational in my response, or would you like me to be a support to you?
+
+Participant: …
+
+AI Therapist: All the emotions you are experiencing are extremely valid. It is normal to feel this way. One recommendation I have is to x, x, or x.
+
 
 \*\***Please describe and document your process.**\*\*
 
@@ -248,10 +264,14 @@ Find a partner, and *without sharing the script with your partner* try out the d
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
+The dialogue seemed more awkward than it was imagined. Since the therapist doesn't have any context and it is also unnatural to speak to an AI. It was hard to form a connection while speaking with the patient. In addition, as the person acting as the therapist, I was struggling to give advice to the patient, which is a intelligence issue on my part.
+
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
 
 \*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*
+
+Without context on the user, it is hard for the AI Therapist to give feedback and concrete solutions. In addition, like I mentioned above, it is awkward for people to speak with an AI bot. Finally, it is hard to know when the AI Therapist should tell people what they should do, or when to be more supportive.
 
 # Lab 3 Part 2
 
@@ -260,7 +280,13 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+
+The main improvement would be adding context to the AI Therapist, which would make it more kind and warm in speaking with the patient.
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+I think giving a visual representation of the AI Therapist could make it easier to interact with, as it is more humanized.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
 
 ## Prototype your system
