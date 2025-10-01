@@ -81,7 +81,8 @@ Typically, a `.sh` file is a shell script which you can execute in a terminal. T
 You can also play audio files directly with `aplay filename`. Try typing `aplay lookdave.wav`.
 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
-(This shell file should be saved to your own repo for this lab.)
+
+I made a shell file called hello_person.sh which says the persons name and says it is at your assistance.
 
 ---
 Bonus:
@@ -147,6 +148,8 @@ and
 python faster_whisper_try.py
 ```
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
+
+I made a file called numerical_input.sh that records the numbers that you say.
 
 ### 🤖 NEW: AI-Powered Conversations with Ollama
 
