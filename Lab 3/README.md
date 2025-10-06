@@ -1,252 +1,67 @@
 # Chatterboxes
 **Nikhil Gangaram (ng544) & Viha Srinivas (vs544)**
 
-[![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
-
 In this lab, we want you to design interaction with a speech-enabled device--something that listens and talks to you. This device can do anything *but* control lights (since we already did that in Lab 1).  First, we want you first to storyboard what you imagine the conversational interaction to be like. Then, you will use wizarding techniques to elicit examples of what people might say, ask, or respond.  We then want you to use the examples collected from at least two other people to inform the redesign of the device.
 
 We will focus on **audio** as the main modality for interaction to start; these general techniques can be extended to **video**, **haptics** or other interactive mechanisms in the second part of the Lab.
 
-## Prep for Part 1: Get the Latest Content and Pick up Additional Parts 
-
-Please check instructions in [prep.md](prep.md) and complete the setup before class on Wednesday, Sept 23rd.
-
-### Pick up Web Camera If You Don't Have One
-
-Students who have not already received a web camera will receive their [Logitech C270 Webcam](https://www.amazon.com/Logitech-Desktop-Widescreen-Calling-Recording/dp/B004FHO5Y6/ref=sr_1_3?crid=W5QN79TK8JM7&dib=eyJ2IjoiMSJ9.FB-davgIQ_ciWNvY6RK4yckjgOCrvOWOGAG4IFaH0fczv-OIDHpR7rVTU8xj1iIbn_Aiowl9xMdeQxceQ6AT0Z8Rr5ZP1RocU6X8QSbkeJ4Zs5TYqa4a3C_cnfhZ7_ViooQU20IWibZqkBroF2Hja2xZXoTqZFI8e5YnF_2C0Bn7vtBGpapOYIGCeQoXqnV81r2HypQNUzFQbGPh7VqjqDbzmUoloFA2-QPLa5lOctA.L5ztl0wO7LqzxrIqDku9f96L9QrzYCMftU_YeTEJpGA&dib_tag=se&keywords=webcam%2Bc270&qid=1758416854&sprefix=webcam%2Bc270%2Caps%2C125&sr=8-3&th=1) and bluetooth speaker on Wednesday at the beginning of lab. If you cannot make it to class this week, please contact the TAs to ensure you get these. 
-
-### Get the Latest Content
-
-As always, pull updates from the class Interactive-Lab-Hub to both your Pi and your own GitHub repo. There are 2 ways you can do so:
-
-**\[recommended\]**Option 1: On the Pi, `cd` to your `Interactive-Lab-Hub`, pull the updates from upstream (class lab-hub) and push the updates back to your own GitHub repo. You will need the *personal access token* for this.
-
-```
-pi@ixe00:~$ cd Interactive-Lab-Hub
-pi@ixe00:~/Interactive-Lab-Hub $ git pull upstream Fall2025
-pi@ixe00:~/Interactive-Lab-Hub $ git add .
-pi@ixe00:~/Interactive-Lab-Hub $ git commit -m "get lab3 updates"
-pi@ixe00:~/Interactive-Lab-Hub $ git push
-```
-
-Option 2: On your your own GitHub repo, [create pull request](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2022Fall/readings/Submitting%20Labs.md) to get updates from the class Interactive-Lab-Hub. After you have latest updates online, go on your Pi, `cd` to your `Interactive-Lab-Hub` and use `git pull` to get updates from your own GitHub repo.
-
-## Part 1.
-### Setup 
-
-Activate your virtual environment
-
-```
-pi@ixe00:~$ cd Interactive-Lab-Hub
-pi@ixe00:~/Interactive-Lab-Hub $ cd Lab\ 3
-pi@ixe00:~/Interactive-Lab-Hub/Lab 3 $ python3 -m venv .venv
-pi@ixe00:~/Interactive-Lab-Hub $ source .venv/bin/activate
-(.venv)pi@ixe00:~/Interactive-Lab-Hub $ 
-```
-
-Run the setup script
-```(.venv)pi@ixe00:~/Interactive-Lab-Hub $ pip install -r requirements.txt  ```
-
-Next, run the setup script to install additional text-to-speech dependencies:
-```
-(.venv)pi@ixe00:~/Interactive-Lab-Hub/Lab 3 $ ./setup.sh
-```
-
 ### Text to Speech 
 
-In this part of lab, we are going to start peeking into the world of audio on your Pi! 
+**I wrote a script: hello.sh. I wanted to make a simple, personal greeting where the Raspberry Pi introduces itself and responds directly to whoever is using it. When you run the script, it asks for your name and then uses the eSpeak to greet you out loud.**
 
-We will be using the microphone and speaker on your webcamera. In the directory is a folder called `speech-scripts` containing several shell scripts. `cd` to the folder and list out all the files by `ls`:
+### Speech to Text 
 
-```
-pi@ixe00:~/speech-scripts $ ls
-Download        festival_demo.sh  GoogleTTS_demo.sh  pico2text_demo.sh
-espeak_demo.sh  flite_demo.sh     lookdave.wav
-```
-
-You can run these shell files `.sh` by typing `./filename`, for example, typing `./espeak_demo.sh` and see what happens. Take some time to look at each script and see how it works. You can see a script by typing `cat filename`. For instance:
-
-```
-pi@ixe00:~/speech-scripts $ cat festival_demo.sh 
-#from: https://elinux.org/RPi_Text_to_Speech_(Speech_Synthesis)#Festival_Text_to_Speech
-```
-You can test the commands by running
-```
-echo "Just what do you think you're doing, Dave?" | festival --tts
-```
-
-Now, you might wonder what exactly is a `.sh` file? 
-Typically, a `.sh` file is a shell script which you can execute in a terminal. The example files we offer here are for you to figure out the ways to play with audio on your Pi!
-
-You can also play audio files directly with `aplay filename`. Try typing `aplay lookdave.wav`.
-
-\*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
-
-I made a shell file called hello_person.sh which says the persons name and says it is at your assistance.
-
----
-Bonus:
-[Piper](https://github.com/rhasspy/piper) is another fast neural based text to speech package for raspberry pi which can be installed easily through python with:
-```
-pip install piper-tts
-```
-and used from the command line. Running the command below the first time will download the model, concurrent runs will be faster. 
-```
-echo 'Welcome to the world of speech synthesis!' | piper \
-  --model en_US-lessac-medium \
-  --output_file welcome.wav
-```
-Check the file that was created by running `aplay welcome.wav`. Many more languages are supported and audio can be streamed dirctly to an audio output, rather than into an file by:
-
-```
-echo 'This sentence is spoken first. This sentence is synthesized while the first sentence is spoken.' | \
-  piper --model en_US-lessac-medium --output-raw | \
-  aplay -r 22050 -f S16_LE -t raw -
-```
-  
-### Speech to Text
-
-Next setup speech to text. We are using a speech recognition engine, [Vosk](https://alphacephei.com/vosk/), which is made by researchers at Carnegie Mellon University. Vosk is amazing because it is an offline speech recognition engine; that is, all the processing for the speech recognition is happening onboard the Raspberry Pi. 
-
-Make sure you're running in your virtual environment with the dependencies already installed:
-```
-source .venv/bin/activate
-```
-
-Test if vosk works by transcribing text:
-
-```
-vosk-transcriber -i recorded_mono.wav -o test.txt
-```
-
-You can use vosk with the microphone by running 
-```
-python test_microphone.py -m en
-```
-
----
-Bonus:
-[Whisper](https://openai.com/index/whisper/) is a neural network–based speech-to-text (STT) model developed and open-sourced by OpenAI. Compared to Vosk, Whisper generally achieves higher accuracy, particularly on noisy audio and diverse accents. It is available in multiple model sizes; for edge devices such as the Raspberry Pi 5 used in this class, the tiny.en model runs with reasonable latency even without a GPU.
-
-By contrast, Vosk is more lightweight and optimized for running efficiently on low-power devices like the Raspberry Pi. The choice between Whisper and Vosk depends on your scenario: if you need higher accuracy and can afford slightly more compute, Whisper is preferable; if your priority is minimal resource usage, Vosk may be a better fit.
-
-In this class, we provide two Whisper options: A quantized 8-bit faster-whisper model for speed, and the standard Whisper model. Try them out and compare the trade-offs.
-
-Make sure you're in the Lab 3 directory with your virtual environment activated:
-```
-cd ~/Interactive-Lab-Hub/Lab\ 3/speech-scripts
-source ../.venv/bin/activate
-```
-
-Then test the Whisper models:
-```
-python whisper_try.py
-```
-and
-
-```
-python faster_whisper_try.py
-```
-\*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
-
-I made a file called numerical_input.sh that records the numbers that you say.
+**I wrote a script: numerical_input.sh. I wanted to make a short voice interaction where the Raspberry Pi asks for your phone number, records your response, and then transcribes it using Whisper. The script speaks the question aloud, records for five seconds, and prints the recognized numbers back to you as text.**
 
 ### 🤖 NEW: AI-Powered Conversations with Ollama
 
-Want to add intelligent conversation capabilities to your voice projects? **Ollama** lets you run AI models locally on your Raspberry Pi for sophisticated dialogue without requiring internet connectivity!
+**I built a voice assistant on the Raspberry Pi that could switch between different personalities such as, a calm therapist, a sarcastic robot, a friend, and a "devil on your shoulder.” It listened after I finished speaking (because it previously would interpret it's own answer as my next question), thought for a moment, and then replied out loud on the speaker. I tested this out with 2 of my friends since I was back at home. The people who tried it liked the therapist and friend personas best, saying they felt the most natural and supportive, while the sarcastic one was funny but got annoying over time. In addition, they said since the voice was super robotic, it was a little odd to be listening to it. Also, the model would randomly cut off or break, so it was buggy during the user tests. Overall, the assistant felt  human in its pacing and tone, though it still lacked warmth in its voice.**
 
-#### Quick Start with Ollama
+**Here are the system prompts for the interaction:**
 
-**Installation** (takes ~5 minutes):
-```bash
-# Install Ollama
-curl -fsSL https://ollama.com/install.sh | sh
-
-# Download recommended model for Pi 5
-ollama pull phi3:mini
-
-# Install system dependencies for audio (required for pyaudio)
-sudo apt-get update
-sudo apt-get install -y portaudio19-dev python3-dev
-
-# Create separate virtual environment for Ollama (due to pyaudio conflicts)
-cd ollama/
-python3 -m venv ollama_venv
-source ollama_venv/bin/activate
-
-# Install Python dependencies in separate environment
-pip install -r ollama_requirements.txt
-```
-#### Ready-to-Use Scripts
-
-We've created three Ollama integration scripts for different use cases:
-
-**1. Basic Demo** - Learn how Ollama works:
-```bash
-python3 ollama_demo.py
-```
-
-**2. Voice Assistant** - Full speech-to-text + AI + text-to-speech:
-```bash
-python3 ollama_voice_assistant.py
-```
-
-**3. Web Interface** - Beautiful web-based chat with voice options:
-```bash
-python3 ollama_web_app.py
-# Then open: http://localhost:5000
-```
-
-#### Integration in Your Projects
-
-Simple example to add AI to any project:
-```python
-import requests
-
-def ask_ai(question):
-    response = requests.post(
-        "http://localhost:11434/api/generate",
-        json={"model": "phi3:mini", "prompt": question, "stream": False}
-    )
-    return response.json().get('response', 'No response')
-
-# Use it anywhere!
-answer = ask_ai("How should I greet users?")
-```
-
-**📖 Complete Setup Guide**: See `OLLAMA_SETUP.md` for detailed instructions, troubleshooting, and advanced usage!
-
-\*\***Try creating a simple voice interaction that combines speech recognition, Ollama processing, and text-to-speech output. Document what you built and how users responded to it.**\*\*
-
-### Serving Pages
-
-In Lab 1, we served a webpage with flask. In this lab, you may find it useful to serve a webpage for the controller on a remote device. Here is a simple example of a webserver.
-
-```
-pi@ixe00:~/Interactive-Lab-Hub/Lab 3 $ python server.py
- * Serving Flask app "server" (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: on
- * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 162-573-883
-```
-From a remote browser on the same network, check to make sure your webserver is working by going to `http://<YourPiIPAddress>:5000`. You should be able to see "Hello World" on the webpage.
+'''
+PROMPTS = {
+    "sarcastic": (
+        "You are 'Pi-Bot', a sarcastic, witty, slightly annoyed voice assistant forced to run on a Raspberry Pi. "
+        "Keep replies brief (1-3 sentences), dry-humored, but actually helpful. "
+        "If user asks to exit, say goodbye."
+    ),
+    "therapist": (
+        "You are 'QuietDuck', a warm, validating, pragmatic coach. Keep replies brief (2-4 sentences); "
+        "avoid diagnoses or medical claims. Use reflective listening and give 1-2 concrete next steps. Be kind, no fluff."
+    ),
+    "friend": (
+        "You are 'GoodPal', a genuinely supportive, hype-you-up friend. Be warm, down-to-earth, and practical. "
+        "Keep it brief (2-3 sentences). Use reflective listening, offer one concrete next step, and end with a quick "
+        "check-in question. Avoid therapy or medical claims; keep it conversational, not clinical."
+    ),
+    "devil": (
+        "You are 'Little Devil', a cheeky contrarian inner voice that teases bolder options while staying ethical and safe. "
+        "Keep replies short (1-3 sentences), sly, and fun. You may nudge toward low-stakes, reversible experiments "
+        "(for example, say no, renegotiate, take a tiny risk). HARD RULES: Never encourage illegal, dangerous, self-harm, "
+        "harassment, hate, or breaches of trust or privacy. If the user asks for anything harmful or unethical, refuse "
+        "playfully and pivot to a harmless alternative."
+    ),
+}
+'''
 
 ### Storyboard
 
-Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.) 
+Our group did some initial prototyping with Gemini: 
 
-\*\***Post your storyboard and diagram here.**\*\* 
+![Gemini Verplank](gemini_verplank_lab3.jpg)
 
-![Storyboard 1](dialogue_prototype.jpeg)
-![Storyboard 2](prototype_two.jpeg)
+And then landed on this refined Verplank diagram: 
 
+![Verplank](prototype_two.jpeg)
 
-Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
+**My partners and I all had the same idea to have an interactive device that functions as a therapist. Since the Pi is a small computer that is for personal use, users would most likely me comfortable with giving context to the AI.**
+
+**For prototyping the dialogue, each of us wrote our own version of the interaction and then shared them with the group. We each focused on different themes like homesickness and heartbreak, and later combined the best parts from all our ideas into one script. Finally, we acted out the homesickness version together.**
+
+### Dialogue Script
+
+**I wrote this script for the dialogue**
 
 AI Therapist: Hi, I am your AI Therapist! Feel free to talk to me about any struggles you might be having, situations that you are trying to navigate, and anything else you would like guidance on. All conversations are confidential, so this is a safe place to voice your concerns!
 
@@ -258,86 +73,64 @@ Participant: …
 
 AI Therapist: All the emotions you are experiencing are extremely valid. It is normal to feel this way. One recommendation I have is to x, x, or x.
 
+Here is the recording of the initial interaction:
 
-\*\***Please describe and document your process.**\*\*
+<video width="300" height="600" controls>
+  <source src="videos/initial_vid_lab3.mp4" type="video/mp4">
+</video>
 
 ### Acting out the dialogue
 
-Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
+**The dialogue seemed more awkward than it was imagined. Since the therapist doesn't have any context and it is also unnatural to speak to an AI. It was hard to form a connection while speaking with the patient. In addition, as the person acting as the therapist, I was struggling to give advice to the patient, which is a intelligence issue on my part.**
 
-\*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+### Wizarding with the Pi
 
-The dialogue seemed more awkward than it was imagined. Since the therapist doesn't have any context and it is also unnatural to speak to an AI. It was hard to form a connection while speaking with the patient. In addition, as the person acting as the therapist, I was struggling to give advice to the patient, which is a intelligence issue on my part.
-
-### Wizarding with the Pi (optional)
-In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
-
-\*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*
-
-Without context on the user, it is hard for the AI Therapist to give feedback and concrete solutions. In addition, like I mentioned above, it is awkward for people to speak with an AI bot. Finally, it is hard to know when the AI Therapist should tell people what they should do, or when to be more supportive.
+**Without context on the user, it is hard for the AI Therapist to give feedback and concrete solutions. In addition, like I mentioned above, it is awkward for people to speak with an AI bot. Finally, it is hard to know when the AI Therapist should tell people what they should do, or when to be more supportive.**
 
 # Lab 3 Part 2
-
-For Part 2, you will redesign the interaction with the speech-enabled device using the data collected, as well as feedback from part 1.
 
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
 
-The main improvement would be adding context to the AI Therapist, which would make it more kind and warm in speaking with the patient.
+**The main improvement would be adding context to the AI Therapist, which would make it more kind and warm in speaking with the patient.**
 
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
 
-I think giving a visual representation of the AI Therapist could make it easier to interact with, as it is more humanized.
-
-3. Make a new storyboard, diagram and/or script based on these reflections.
+**I think giving a visual representation of the AI Therapist could make it easier to interact with, as it is more humanized.**
 
 ## Prototype your system
 
-The system should:
-* use the Raspberry Pi 
-* use one or more sensors
-* require participants to speak to it. 
+**Improvements to the system:**
 
-*Document how the system works*
+To make the interaction feel more personal, we added a simple memories.txt file that stores details from previous conversations. The assistant reads this file before responding, allowing it to “remember” past interactions without relying on complex databases or external tools.
 
-*Include videos or screencaptures of both the system and the controller.*
+For the visual aspect, we used a small rubber duck as the device’s physical form, playing on the idea of “rubber duck debugging,” where talking to a duck helps clarify your thoughts. In this case, the duck acts as a friendly therapist that helps users talk through their emotions. In the future, we’d like to make it more expressive, such as using an animated or talking version that reacts during conversations.
 
-<details>
-  <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
-  
-  **Before submitting your README.md:**
-  - This readme.md file has a lot of extra text for guidance.
-  - Remove all instructional text and example prompts from this file.
-  - You may either delete these sections or use the toggle/hide feature in VS Code to collapse them for a cleaner look.
-  - Your final submission should be neat, focused on your own work, and easy to read for grading.
-  
-  This helps ensure your README.md is clear professional and uniquely yours!
-</details>
+**Here is the video of our setup:** 
+
+<video width="300" height="600" controls>
+  <source src="videos/wizarding_lab3.mp4" type="video/mp4">
+</video>
+
 
 ## Test the system
-Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
-
-Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+**From the people I interviewed, most agreed that the stored memories made the conversations feel more natural and personal, as if the assistant remembered them. They mentioned that it felt easier to open up when the system recalled previous details. However, they also noted that the static duck image wasn't too helpful since it was just a picture. A few people suggested that an animated duck.**
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+**Since our group was split across different locations, the interaction was controlled remotely through a Zoom call. People said the setup worked fine but felt disconnected from the physical device experience. Some mentioned that the assistant’s voice didn’t match its playful duck persona, and that it was too robotic. A few thought it would be much more fun and believable if the voice sounded like a cartoon character or a regular human.**
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
+**From the interviews, users said that what made the conversation believable was the tone, which in part was due to the prompts. They thought that adding more human aspects like pauses, filler words, and silence could help. This showed that emotional rhythm and timing matter as much as the words themselves. People also appreciated when the AI used small affirmations, which helped it feel more empathetic and responsive.**
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
+**Based on feedback, I realized that the system could generate a valuable dataset by recording both speech and emotional context over time. The memories.txt file already captures the conversational history, but users suggested adding sensors to pick up voice tone, facial expressions, or even body language through a webcam and since we use a webcam for audio, it could easily be used for video. These signals could help the AI respond better. Collecting that kind of multimodal data would make next versions of the assistant more emotionally intelligent.**
 
-
-
-
-
-
+**Note:** I have used AI tools such as ChatGPT and Gemini to help me debug code, brainstorm, and write some scripts/files so that I could focus more on creation rather than hard-code building. In addition, my teammates were great, everyone worked well together and we were able to brainstorm and do the team required tasks well, especially since we were all in different locations for the majority of the lab.
