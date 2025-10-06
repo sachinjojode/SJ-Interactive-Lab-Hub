@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Ollama Flask Web Interface for Lab 3
-Web-based voice assistant using Ollama
+Web-based voice assistant using TinyLlama via Ollama
 
-This extends the existing Flask app in demo/app.py to include Ollama integration
+This extends the existing Flask app in demo/app.py to include Ollama integration with TinyLlama model
 """
 
 import eventlet
@@ -21,19 +21,24 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 # Ollama configuration
 OLLAMA_URL = "http://localhost:11434"
-DEFAULT_MODEL = "phi3:mini"
+DEFAULT_MODEL = "phi3:mini"  # Try phi3:mini for better performance
 
 def query_ollama(prompt, model=DEFAULT_MODEL):
-    """Query Ollama and return response"""
+    """Query Ollama with TinyLlama model and return response"""
     try:
         response = requests.post(
             f"{OLLAMA_URL}/api/generate",
             json={
                 "model": model,
                 "prompt": prompt,
-                "stream": False
+                "stream": False,
+                "options": {
+                    "temperature": 0.7,
+                    "top_p": 0.9,
+                    "num_predict": 100  # Limit response length for faster generation
+                }
             },
-            timeout=30
+            timeout=15  # Reduced timeout for faster failure detection
         )
         
         if response.status_code == 200:
@@ -42,9 +47,9 @@ def query_ollama(prompt, model=DEFAULT_MODEL):
             return f"Error: Ollama returned status {response.status_code}"
     
     except requests.exceptions.Timeout:
-        return "Sorry, the response took too long. Please try again."
+        return "TinyLlama is taking too long to respond. Try a shorter question or check if Ollama is running properly."
     except Exception as e:
-        return f"Error: {str(e)}"
+        return f"Error connecting to TinyLlama: {str(e)}"
 
 def speak_text(text):
     """Text-to-speech using espeak"""
@@ -67,8 +72,10 @@ def chat_api():
     if not user_message:
         return jsonify({'error': 'No message provided'}), 400
     
-    # Query Ollama
+    # Query Ollama with progress feedback
+    print(f"Processing request: {user_message[:50]}...")
     response = query_ollama(user_message)
+    print(f"Response received: {len(response)} characters")
     
     return jsonify({
         'user_message': user_message,
@@ -134,6 +141,6 @@ def status():
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
 if __name__ == '__main__':
-    print("🚀 Starting Ollama Flask Web Interface...")
+    print("Starting Ollama Flask Web Interface with TinyLlama...")
     print("Open your browser to http://localhost:5000")
     socketio.run(app, host='0.0.0.0', port=5000, debug=True)

@@ -30,13 +30,15 @@ if sys.stderr.encoding != 'UTF-8':
 
 try:
     import pyttsx3
-    TTS_ENGINE = 'pyttsx3'
+    # Force use of espeak instead of pyttsx3 on Pi
+    TTS_ENGINE = 'espeak'
+    print("Using espeak for TTS (pyttsx3 disabled for Pi compatibility)")
 except ImportError:
     TTS_ENGINE = 'espeak'
     print("pyttsx3 not available, using espeak for TTS")
 
 class OllamaVoiceAssistant:
-    def __init__(self, model_name="phi3:mini", ollama_url="http://localhost:11434"):
+    def __init__(self, model_name="tinyllama", ollama_url="http://localhost:11434"):
         self.model_name = model_name
         self.ollama_url = ollama_url
         self.recognizer = sr.Recognizer()
@@ -83,12 +85,8 @@ class OllamaVoiceAssistant:
         clean_text = text.encode('ascii', 'ignore').decode('ascii')
         print(f"Assistant: {clean_text}")
         
-        if TTS_ENGINE == 'pyttsx3':
-            self.tts_engine.say(clean_text)
-            self.tts_engine.runAndWait()
-        else:
-            # Use espeak as fallback
-            subprocess.run(['espeak', clean_text], check=False)
+        # Always use espeak on Pi
+        subprocess.run(['espeak', clean_text], check=False)
 
     def listen(self):
         """Listen for speech and convert to text"""
@@ -129,7 +127,7 @@ class OllamaVoiceAssistant:
             response = requests.post(
                 f"{self.ollama_url}/api/generate",
                 json=data,
-                timeout=30
+                timeout=60  # Increase from 30 to 60 seconds
             )
             
             if response.status_code == 200:
@@ -187,6 +185,9 @@ class OllamaVoiceAssistant:
                 break
             except Exception as e:
                 print(f"Unexpected error: {e}")
+                print(f"Error type: {type(e).__name__}")
+                import traceback
+                traceback.print_exc()
                 self.speak("Sorry, I encountered an error. Let's try again.")
 
 def main():
@@ -202,9 +203,9 @@ def main():
         print("Please install with: pip install speechrecognition requests pyaudio")
         return
     
-    # Create and run the assistant
+    # Create and run the assistant with tinyllama
     try:
-        assistant = OllamaVoiceAssistant()
+        assistant = OllamaVoiceAssistant(model_name="tinyllama")
         assistant.run_conversation()
     except Exception as e:
         print(f"Failed to start assistant: {e}")
