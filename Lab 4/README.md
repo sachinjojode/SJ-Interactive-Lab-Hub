@@ -6,59 +6,27 @@
 ## Part A
 ### Capacitive Sensing, a.k.a. Human-Twizzler Interaction 
 
-All sensor testing videos are in the **Lab 4/assets/videos/sensors** folder.
+For all sensor testing videos, you can view them in the **Lab 4/assets/videos/sensor_tests** folder. Apologies for the lack of rendering on the GitHub side but they are rendering properly when in VSCode.
 
-Video link: [twizzler.mov](assets/videos/sensors/twizzler.mov)
-
-<video width="300" height="600" controls>
-  <source src="assets/videos/sensors/twizzler.mov" type="video/mp4">
-</video>
+Video link: [twizzler.mov](https://www.youtube.com/watch?v=UR29FbM2_Zg)
 
 ### Part B
 
 #### Light/Proximity/Gesture sensor (APDS-9960)
 
-Video link: [proximity_test.mov](assets/videos/sensors/proximity_test.mov)
-
-<video width="300" height="600" controls>
-  <source src="assets/videos/sensors/proximity_test.mov" type="video/mp4">
-</video>
-
-Video link: [color_sensor.mov](assets/videos/sensors/color_sensor.mov)
-
-<video width="300" height="600" controls>
-  <source src="assets/videos/sensors/color_sensor.mov" type="video/mp4">
-</video>
-
-Video link: [gesture_sensor.mov](assets/videos/sensors/gesture_sensor.mov)
-
-<video width="300" height="600" controls>
-  <source src="assets/videos/sensors/gesture_sensor.mov" type="video/mp4">
-</video>
+Video link: [sensors.mov](https://www.youtube.com/watch?v=EVjcOtlsp9w)
 
 #### Rotary Encoder 
 
-Video link: [rotary_encoder.mov](assets/videos/sensors/rotary_encoder.mov)
-
-<video width="300" height="600" controls>
-  <source src="assets/videos/sensors/rotary_encoder.mov" type="video/mp4">
-</video>
+Video link: [encoder.mov](https://www.youtube.com/watch?v=T9menfbH3-I)
 
 #### Joystick 
 
-Video link: [joystick.mov](assets/videos/sensors/joystick.mov)
-
-<video width="300" height="600" controls>
-  <source src="assets/videos/sensors/joystick.mov" type="video/mp4">
-</video>
+Video link: [joystick.mov](https://www.youtube.com/watch?v=TCmgt5xkJVs)
 
 #### Distance Sensor
 
-Video link: [proximity_2.mov](assets/videos/sensors/proximity_2.mov)
-
-<video width="300" height="600" controls>
-  <source src="assets/videos/sensors/proximity_2.mov" type="video/mp4">
-</video>
+Video link: [proximity.mov](https://www.youtube.com/watch?v=fr77xgzWXX8)
 
 ### Part C
 ### Physical considerations for sensing
