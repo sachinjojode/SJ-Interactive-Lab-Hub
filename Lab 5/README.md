@@ -1,6 +1,6 @@
 # Observant Systems
 
-**Sachin Jojode, Viha Srinivas, and Arya Prasad**
+**Nikhil Gangaram (ng544), Viha Srinivas (vs544), Arya Prasad (ap2535)**
 
 ### Part B
 ### Construct a simple interaction.
