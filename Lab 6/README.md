@@ -123,6 +123,12 @@ Hold colored objects near sensor to change your pixel!
 
 **📸 Include: Screenshot of grid + photo of your Pi setup**
 
+![Screenshot of Grid](imgs/grid_screenshot.jpeg)
+![Photo of Setup](imgs/pi_setup.jpeg)
+
+![Screenshot of Grid](imgs/grid_screenshot_2.jpeg)
+![Photo of Setup](imgs/pi_setup_2.jpeg)
+
 ---
 
 ## Part C: Make Your Own

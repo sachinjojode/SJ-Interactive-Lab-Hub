@@ -86,7 +86,7 @@ def handle_color_update(data):
                 'position': position,
                 'last_update': datetime.now()
             }
-            print(f'✓ New pixel: {mac[:17]} at position {position}')
+            print(f'[OK] New pixel: {mac[:17]} at position {position}')
         else:
             # Update existing pixel
             pixels[mac]['color'] = [r, g, b]
@@ -129,7 +129,7 @@ if __name__ == '__main__':
     except ImportError:
         print("  MQTT bridge not available (install paho-mqtt)")
     except Exception as e:
-        print(f"  MQTT bridge disabled: {e}")
+        print(f'[WARNING] MQTT bridge failed: {e}')
     
     print("=" * 60)
     print()
